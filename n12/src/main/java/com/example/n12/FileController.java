@@ -26,6 +26,7 @@ public class FileController {
             while (fileReader.hasNext()){
                 builder.append(fileReader.next().hashCode()).append(" ");
             }
+            fileReader.close();
         }
         catch (IOException e){
             System.out.println("Error: " + e);

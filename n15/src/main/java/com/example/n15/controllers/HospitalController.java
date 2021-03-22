@@ -1,0 +1,42 @@
+package com.example.n15.controllers;
+
+import com.example.n15.models.Hospital;
+import com.example.n15.services.HospitalService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class HospitalController {
+
+    private final HospitalService hospitalService;
+
+    @Autowired
+    public HospitalController(HospitalService hospitalService) {
+        this.hospitalService = hospitalService;
+    }
+
+    @GetMapping("/hospitals")
+    public List<Hospital> getAll(){
+        return hospitalService.getAll();
+    }
+
+    @DeleteMapping("/hospitals/{name}")
+    public List<Hospital> delete(@PathVariable("name") String name){
+        List<Hospital> list = hospitalService.getAll();
+        for(Hospital p: list){
+            if (p.getName().equalsIgnoreCase(name)) {
+                hospitalService.delete(p);
+                break;
+            }
+        }
+        return hospitalService.getAll();
+    }
+
+    @PostMapping("/hospitals")
+    public List<Hospital> create(@RequestBody Hospital hospital){
+        hospitalService.add(hospital);
+        return hospitalService.getAll();
+    }
+}
