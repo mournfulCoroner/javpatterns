@@ -1,7 +1,7 @@
-package com.example.n15.services;
+package com.example.n16.services;
 
-import com.example.n15.dao.PatientDAO;
-import com.example.n15.models.Patient;
+import com.example.n16.dao.PatientDAO;
+import com.example.n16.models.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
