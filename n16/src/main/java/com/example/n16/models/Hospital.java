@@ -1,7 +1,7 @@
 package com.example.n16.models;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "hospital")
@@ -17,15 +17,15 @@ public class Hospital {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "hospital", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Patient> patientsList;
+    @OneToMany(mappedBy = "hospital", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Patient> patientsSet;
 
-    public List<Patient> getPatientsList() {
-        return patientsList;
+    public Set<Patient> getPatientsSet() {
+        return patientsSet;
     }
 
-    public void setPatientsList(List<Patient> patientsList) {
-        this.patientsList = patientsList;
+    public void setPatientsSet(Set<Patient> patientsSet) {
+        this.patientsSet = patientsSet;
     }
 
     public int getId() {
@@ -53,10 +53,10 @@ public class Hospital {
     }
 
     public void addPatient(Patient patient){
-        patientsList.add(patient);
+        patientsSet.add(patient);
     }
 
     public void removePatient(Patient patient){
-        patientsList.remove(patient);
+        patientsSet.remove(patient);
     }
 }

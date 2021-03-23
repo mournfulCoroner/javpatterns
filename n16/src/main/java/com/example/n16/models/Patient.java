@@ -1,5 +1,7 @@
 package com.example.n16.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,7 @@ public class Patient {
     private String lastName;
 
     @ManyToOne
+    @JsonIgnore
     private Hospital hospital;
 
     public int getId() {

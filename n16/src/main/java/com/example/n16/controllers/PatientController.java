@@ -1,5 +1,6 @@
 package com.example.n16.controllers;
 
+import com.example.n16.dto.PatientDTO;
 import com.example.n16.models.Patient;
 import com.example.n16.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +18,14 @@ public class PatientController {
     }
 
     @GetMapping("/patients")
-    public List<Patient> getAll(){
+    public List<PatientDTO> getAll(){
         return patientService.getAll();
     }
 
     @DeleteMapping("/patients/{name}")
-    public List<Patient> delete(@PathVariable("name") String name){
-        List<Patient> list = patientService.getAll();
-        for(Patient p: list){
+    public List<PatientDTO> delete(@PathVariable("name") String name){
+        List<PatientDTO> list = patientService.getAll();
+        for(PatientDTO p: list){
             if (p.getFirstName().equalsIgnoreCase(name) || p.getLastName().equalsIgnoreCase(name)) {
                 patientService.delete(p);
                 break;
@@ -34,8 +35,8 @@ public class PatientController {
     }
 
     @PostMapping("/patients")
-    public List<Patient> create(@RequestBody Patient patient){
-        patientService.add(patient);
+    public List<PatientDTO> create(@RequestBody PatientDTO patientDTO){
+        patientService.add(patientDTO);
         return patientService.getAll();
     }
 }

@@ -1,10 +1,21 @@
 package com.example.n16.dto;
 
+import java.util.Set;
+
 public class HospitalDTO {
 
     private int id;
     private String address;
     private String name;
+    private Set<PatientDTO> patientDTOSet;
+
+    public Set<PatientDTO> getPatientDTOSet() {
+        return patientDTOSet;
+    }
+
+    public void setPatientDTOSet(Set<PatientDTO> patientDTOSet) {
+        this.patientDTOSet = patientDTOSet;
+    }
 
     public int getId() {
         return id;
