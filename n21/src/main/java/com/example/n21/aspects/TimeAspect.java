@@ -1,4 +1,4 @@
-package com.example.n18.aspects;
+package com.example.n21.aspects;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class TimeAspect {
-    @Pointcut("execution( * com.example.n18.services.*(..))")
+    @Pointcut("execution(* com.example.n21.services.*.*(..))")
     public void callAtAllServiceMethods(){}
 
     @Before("callAtAllServiceMethods()")
