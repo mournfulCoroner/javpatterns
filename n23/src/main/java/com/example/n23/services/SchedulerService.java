@@ -1,12 +1,11 @@
-package com.example.n21.services;
+package com.example.n23.services;
 
-import com.example.n21.dao.HospitalDAO;
-import com.example.n21.dao.PatientDAO;
-import com.example.n21.models.Hospital;
-import com.example.n21.models.Patient;
+import com.example.n23.dao.HospitalDAO;
+import com.example.n23.dao.PatientDAO;
+import com.example.n23.models.Hospital;
+import com.example.n23.models.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -33,7 +32,6 @@ public class SchedulerService {
     }
 
     @Scheduled(fixedRate = 1800000)
-    @ManagedOperation
     public void saveDBInfo(){
         System.out.println("Start");
         File file = new File(folderPath);

@@ -1,9 +1,9 @@
-package com.example.n21.services;
+package com.example.n23.services;
 
-import com.example.n21.dao.HospitalDAO;
-import com.example.n21.dao.PatientDAO;
-import com.example.n21.dto.PatientDTO;
-import com.example.n21.models.Patient;
+import com.example.n23.dao.HospitalDAO;
+import com.example.n23.dao.PatientDAO;
+import com.example.n23.dto.PatientDTO;
+import com.example.n23.models.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

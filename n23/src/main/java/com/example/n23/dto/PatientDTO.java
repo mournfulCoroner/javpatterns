@@ -1,4 +1,4 @@
-package com.example.n21.dto;
+package com.example.n23.dto;
 
 public class PatientDTO {
 

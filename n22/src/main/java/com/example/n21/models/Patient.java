@@ -13,10 +13,10 @@ public class Patient {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
     @ManyToOne
@@ -53,5 +53,13 @@ public class Patient {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String toString() {
+        return "Patient{" +
+                "id=" + this.id +
+                ", firstName='" + this.firstName + '\'' +
+                ", lastName='" + this.lastName + '\''  +
+                '}';
     }
 }

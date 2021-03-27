@@ -1,11 +1,27 @@
-package com.example.n21.dto;
+package com.example.n23.models;
 
-public class PatientDTO {
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "patient")
+public class Patient {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
-    private String hospitalName;
+
+    @ManyToOne
+    @JsonIgnore
+    private Hospital hospital;
 
     public int getId() {
         return id;
@@ -15,12 +31,12 @@ public class PatientDTO {
         this.id = id;
     }
 
-    public String getHospitalName() {
-        return hospitalName;
+    public Hospital getHospital() {
+        return hospital;
     }
 
-    public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName;
+    public void setHospital(Hospital hospital) {
+        this.hospital = hospital;
     }
 
     public String getFirstName() {
@@ -43,8 +59,7 @@ public class PatientDTO {
         return "Patient{" +
                 "id=" + this.id +
                 ", firstName='" + this.firstName + '\'' +
-                ", lastName='" + this.lastName + '\'' +
-                ", hospital=" + this.hospitalName +
+                ", lastName='" + this.lastName + '\''  +
                 '}';
     }
 }

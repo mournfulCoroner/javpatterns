@@ -1,4 +1,4 @@
-package com.example.n21.aspects;
+package com.example.n23.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class TimeAspect {
-    @Pointcut("execution(* com.example.n21.services.*.*(..))")
+    @Pointcut("execution(* com.example.n23.services.*.*(..))")
     public void callAtAllServiceMethods(){}
 
     @Around("callAtAllServiceMethods()")
