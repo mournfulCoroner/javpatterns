@@ -1,4 +1,4 @@
-package com.example.n23;
+package com.example.n24;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

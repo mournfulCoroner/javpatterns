@@ -1,8 +1,8 @@
-package com.example.n23.controllers;
+package com.example.n24.controllers;
 
-import com.example.n23.models.Role;
-import com.example.n23.models.User;
-import com.example.n23.services.UserService;
+import com.example.n24.models.Role;
+import com.example.n24.models.User;
+import com.example.n24.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;

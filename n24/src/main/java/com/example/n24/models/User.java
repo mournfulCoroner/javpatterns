@@ -1,4 +1,4 @@
-package com.example.n23.models;
+package com.example.n24.models;
 
 import javax.persistence.*;
 import java.util.Set;
