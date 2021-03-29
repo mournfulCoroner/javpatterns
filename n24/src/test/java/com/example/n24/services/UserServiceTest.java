@@ -23,8 +23,8 @@ public class UserServiceTest {
         User user = new User();
         User user2 = new User();
 
-        user2.setUsername("Alya");
-        user.setUsername("Kel");
+        user.setUsername("Alya");
+        user2.setUsername("Kel");
         Mockito.when(userDAO.findByUsername("Alya")).thenReturn(user);
         Mockito.when(userDAO.findByUsername("Kel")).thenReturn(user2);
 

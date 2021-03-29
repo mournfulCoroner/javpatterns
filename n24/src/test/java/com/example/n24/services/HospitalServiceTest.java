@@ -6,13 +6,16 @@ import com.example.n24.dto.HospitalDTO;
 import com.example.n24.models.Hospital;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
+@ExtendWith(MockitoExtension.class)
 public class HospitalServiceTest {
     @Mock
     private PatientDAO patientDAO;
