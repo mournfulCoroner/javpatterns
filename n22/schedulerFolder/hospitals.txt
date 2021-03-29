@@ -1,1 +1,4 @@
-Hospital{id=2, address='Nowhere', name='Noname', patientsSet=[Patient{id=3, firstName='Maya', lastName='Mitchel'}]}
+Hospital{id=2, address='Nowhere', name='Noname', patientsSet=[Patient{id=3, firstName='Meril', lastName='Mall'}]}
+Hospital{id=4, address='Les', name='FirstHospital', patientsSet=[]}
+Hospital{id=5, address='Ocean', name='Noname', patientsSet=[]}
+Hospital{id=6, address='Ocean', name='Hospital #5', patientsSet=[]}

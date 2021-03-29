@@ -1,2 +1,2 @@
-Patient{id=1, firstName='Liya', lastName='Mitchel'}
-Patient{id=3, firstName='Maya', lastName='Mitchel'}
+Patient{id=1, firstName='Linda', lastName='Norlov'}
+Patient{id=3, firstName='Meril', lastName='Mall'}
